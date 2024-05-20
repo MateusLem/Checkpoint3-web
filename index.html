@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Rede Social</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="header">
+        <img src="https://www.reddiquette.com/wp-content/uploads/2020/09/What-Is-The-Reddit-Logo-Called.png" id="logoImg">
+        <h1>CheckPoint 03 - Minha Rede</h1>
+    </div>
+    <form id="formPost">
+        <div class="postDiv">
+            <p for="postText" class="postLabel"><img src="https://img.icons8.com/?size=100&id=85962&format=png&color=000000">Digite seu post:</p>
+            <input type="text" id="postText" placeholder="O que você está pensando hoje?">
+        </div>
+        
+        <div class="postDiv">
+            <p for="postCategory" class="postLabel"><img src="https://img.icons8.com/?size=100&id=85962&format=png&color=000000">Categoria:</p>
+            <select id="postCategory">
+                <option value="culture">Cultura</option>
+                <option value="games">Games</option>
+                <option value="gossip">Fofoca</option>
+                <option value="none">Outra</option>
+            </select>
+        </div>
+        
+        <div class="postDiv">
+            <p for="postImg1" class="postLabel"><img src="https://img.icons8.com/?size=100&id=68826&format=png&color=000000">Insira uma imagem (URL):</p>
+            <input type="text" id="postImg1" placeholder="Insira a URL aqui">
+        </div>
+
+        <div class="postDiv">
+            <p for="postImg2" class="postLabel"><img src="https://img.icons8.com/?size=100&id=68826&format=png&color=000000">Insira uma imagem (URL):</p>
+            <input type="text" id="postImg2" placeholder="Insira a URL aqui">
+        </div>
+
+        <div class="postDiv">
+            <p for="postImg3" class="postLabel"><img src="https://img.icons8.com/?size=100&id=68826&format=png&color=000000">Insira uma imagem (URL):</p>
+            <input type="text" id="postImg3" placeholder="Insira a URL aqui">
+        </div>
+    </form>
+
+    <button id="postButton">
+        <img src="https://img.icons8.com/?size=100&id=60681&format=png&color=000000">Postar
+    </button>
+
+    <p>Filtrar por categoria:</p>
+    <select id="categoryFilter">
+        <option value="none">Todas as categorias</option>
+        <option value="culture">Cultura</option>
+        <option value="games">Games</option>
+        <option value="gossip">Fofoca</option>
+    </select>
+
+    <div class="posts">
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
