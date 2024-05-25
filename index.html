@@ -11,6 +11,7 @@
         <img src="https://www.reddiquette.com/wp-content/uploads/2020/09/What-Is-The-Reddit-Logo-Called.png" id="logoImg">
         <h1>CheckPoint 03 - Minha Rede</h1>
     </div>
+    
     <form id="formPost">
         <div class="postDiv">
             <p for="postText" class="postLabel"><img src="https://img.icons8.com/?size=100&id=85962&format=png&color=000000">Digite seu post:</p>
@@ -43,12 +44,12 @@
         </div>
     </form>
 
-    <button id="postButton">
+    <button id="postButton" onclick="post()">
         <img src="https://img.icons8.com/?size=100&id=60681&format=png&color=000000">Postar
     </button>
 
     <p>Filtrar por categoria:</p>
-    <select id="categoryFilter">
+    <select id="categoryFilter" onchange="filterByCategory()">
         <option value="none">Todas as categorias</option>
         <option value="culture">Cultura</option>
         <option value="games">Games</option>

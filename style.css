@@ -11,6 +11,17 @@ body {
     min-height: 100vh;
 }
 
+.images{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.images img{
+    height: 30vh;
+    min-width: 15vh;
+    border-radius: 15px;
+}
+
 .header {
     background-color: rgb(255, 51, 0);
     color: white;
@@ -23,7 +34,6 @@ body {
 
 #logoImg {
     width: 50px;
-    height: 50px;
     vertical-align: middle;
 }
 
@@ -126,5 +136,32 @@ select {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+}
+
+.images img {
+    display: none;
+}
+
+.images img:first-child {
+    display: block;
+}
+
+.buttonImages button {
+    margin: 5px;
+    padding: 8px 12px;
+    background-color: rgb(255, 51, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttonImages button:hover {
+    background-color: rgba(255, 51, 0, 0.8);
 }
 
