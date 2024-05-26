@@ -115,8 +115,10 @@ function prevImage(postIndex) {
 
 let posts = [];
 
-addPost("Primeiro post aqui", "culture", ["./images/profile.png", "./images/park.jpg", "./images/object.webp"]);
-addPost("Teu pai aí", "games", ["./images/dad.webp","./images/mom.jpg"]);
+addPost("Primeiro post aqui", "games", ["./images/profile.png", "./images/park.jpg", "./images/object.webp"]);
+addPost("Animais", "culture", 
+["https://img.freepik.com/fotos-gratis/um-leao-com-uma-juba-de-arco-iris-e-olhos-azuis_1340-39421.jpg"
+,"https://static.vecteezy.com/ti/fotos-gratis/t2/17323707-close-up-de-um-reptil-em-um-galho-de-arvore-contra-um-impressionante-papel-de-parede-de-fundo-natural-hd-foto.jpg"]);
 addPost("Tenho uma foto da sua casa. Está com medo agora?", "gossip", ["./images/house.jpg"]);
 
 renderPosts();
