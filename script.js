@@ -21,11 +21,18 @@ function renderPosts(category = "none") {
             })
 
             teste += `    
-            </div>
-            <div class="buttonImages">
-                <button onclick="prevImage(${posts.indexOf(post)})">Anterior</button>
-                <button onclick="nextImage(${posts.indexOf(post)})">Próxima</button>
-            </div>
+            </div>`
+            
+            if (post.images.length > 1) {
+                teste += ` 
+                <div class="buttonImages">
+                    <button onclick="prevImage(${posts.indexOf(post)})">Anterior</button>
+                    <button onclick="nextImage(${posts.indexOf(post)})">Próxima</button>
+                </div>
+                `
+            }
+            
+            teste += `
             <p>Categoria: ${capitalizeFirstLetter(post.category)}</p>
             <p>Postado em: ${post.date.toLocaleString()}</p>
             <div class="buttonContainer">
@@ -91,17 +98,11 @@ function filterByCategory() {
 
 function nextImage(postIndex) {
     const images = document.querySelectorAll(`.post:nth-child(${postIndex + 1}) .images img`);
-    if (images.length<2){
-        console.log(posts[postIndex])
-        let button = document.querySelectorAll(`.post:nth-child(${postIndex + 1}) .buttonImages button`);
-        console.log(button)
-        button.style.display = 'none';
-    } else {
-        const currentImage = document.querySelector(`.post:nth-child(${postIndex + 1}) .images img:not([style*="display: none"])`);
-        const nextImage = currentImage.nextElementSibling || images[0];
-        currentImage.style.display = 'none';
-        nextImage.style.display = 'block';
-    }    
+    const currentImage = document.querySelector(`.post:nth-child(${postIndex + 1}) .images img:not([style*="display: none"])`);
+    const nextImage = currentImage.nextElementSibling || images[0];
+
+    currentImage.style.display = 'none';
+    nextImage.style.display = 'block';
 }
 
 function prevImage(postIndex) {
@@ -111,8 +112,6 @@ function prevImage(postIndex) {
     currentImage.style.display = 'none';
     prevImage.style.display = 'block';
 }
-
-
 
 let posts = [];
 
